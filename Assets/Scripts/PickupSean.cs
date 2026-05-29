@@ -1,0 +1,35 @@
+using UnityEngine;
+
+public class Pickup : MonoBehaviour
+{
+    GameManagerSean gameManager; 
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerSean>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+
+    private void OnTriggerEnter(Collider otherObject)
+    {
+
+        if(otherObject.transform.tag == "Player")
+        {
+            gameManager.currentPickups += 1;
+            Destroy(this.gameObject);
+        }
+
+    }
+
+
+}
+
+
