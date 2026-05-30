@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelSwitchSean : MonoBehaviour
 {
-    GameManager gameManager;
+    GameManagerSean gameManager;
     public string nextLevel;
 
 
@@ -13,7 +13,7 @@ public class LevelSwitchSean : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagerSean>();
     }
 
     // Update is called once per frame
